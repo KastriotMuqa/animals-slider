@@ -1,23 +1,28 @@
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const shuffleValues = () => {
+  const divPreferences = document.querySelectorAll(".preference");
+  const mainContainer = document.querySelector(".main-container");
 
-function shuffleValues() {
-  const parent = checkboxes[0].parentNode;
-  Array.from(checkboxes).sort(() => Math.random() - 0.5).forEach(checkbox => {
-    parent.appendChild(checkbox);
+  Array.from(divPreferences)
+    .sort(() => Math.random() - 0.5)
+    .forEach((checkbox) => {
+      mainContainer.appendChild(checkbox);
+    });
+};
+
+const changeValues = () => {
+  const checkboxes = document.querySelectorAll(".input-selector");
+ 
+  checkboxes.forEach((checkbox, key) => {
+    checkbox.value = `SomethingOfMyChoice-${key + 1}`;
   });
-}
+};
 
-function changeValues() {
-  checkboxes.forEach(checkbox => {
-    checkbox.value = "NewValue";
-    checkbox.checked = false; 
-  });
-}
+const showSelectedValues = () => {
+  const checkboxes = document.querySelectorAll(".input-selector");
 
-function showSelectedValues() {
   const selectedValues = Array.from(checkboxes)
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.value);
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value);
 
   alert("Selected Values: " + selectedValues.join(", "));
-}
+};

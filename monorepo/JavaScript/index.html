@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkbox Manipulation</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div>
-        <label>
-            <input type="checkbox" value="Internship"> Internship
-        </label>
-        <label>
-            <input type="checkbox" value="Pabau"> Pabau
-        </label>
-        <label>
-            <input type="checkbox" value="Employment"> Employment
-        </label>
-        <label>
-            <input type="checkbox" value="Career"> Career
-        </label>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="preference">
+        <label>Internship</label>
+        <input class="input-selector" type="checkbox" value="Internship" />
+      </div>
+      <div class="preference">
+        <label>Pabau</label>
+        <input class="input-selector" type="checkbox" value="Pabau" />
+      </div>
+      <div class="preference">
+        <label>Employment</label>
+        <input class="input-selector" type="checkbox" value="Employment" />
+      </div>
+      <div class="preference">
+        <label>Career</label>
+        <input class="input-selector" type="checkbox" value="Career" />
+      </div>
     </div>
 
     <button onclick="shuffleValues()">Shuffle Values</button>
     <button onclick="changeValues()">Change Values</button>
     <button onclick="showSelectedValues()">Show Selected Values</button>
 
-    <script src="index.js"></script>
-</body>
+    <script src="./index.js"></script>
+  </body>
 </html>
