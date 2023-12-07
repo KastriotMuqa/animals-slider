@@ -50,7 +50,6 @@ export const InformationSlider = () => {
           </p>
         </div>
       </div>
-
       <button onClick={onClickHandler}>Go back</button>
     </div>
   );

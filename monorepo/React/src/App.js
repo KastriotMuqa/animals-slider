@@ -14,9 +14,9 @@ function App() {
   });
   return (
     <SliderContext.Provider value={{ state, dispatch }}>
-      <div className="App">
+      <div className="app">
         <Header />
-        <div className="App-body">
+        <div className="app-body">
           <Slider />
         </div>
         <Footer />

@@ -4,7 +4,6 @@ import SliderContext from "../../context/SliderContext";
 import { useNavigate } from "react-router-dom";
 
 export const AnimalsSlider = () => {
-  // it's meant to be fetched from external apis
   const listOfItems = items;
 
   const navigate = useNavigate();
@@ -12,8 +11,7 @@ export const AnimalsSlider = () => {
   const { dispatch } = useContext(SliderContext);
 
   const onclickHandler = (id) => {
-    // eslint-disable-next-line
-    const item = listOfItems.find((x) => x.id == id);
+    const item = listOfItems.find((x) => x.id === Number(id));
     if (!item) {
       throw new Error("Invalid element selected");
     }
@@ -30,7 +28,7 @@ export const AnimalsSlider = () => {
   };
 
   return (
-    <div>
+    <div className="animals-container">
       {listOfItems.map((x) => (
         <ItemRender
           id={x.id}

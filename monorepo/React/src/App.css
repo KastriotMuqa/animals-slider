@@ -1,21 +1,57 @@
-.element-container {
+.app {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+
+.app-body{
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .image-container {
-  width: 100px; /* Set the desired width */
-  height: 50px; /* Set the desired height */
-  overflow: hidden; /* Hide any content that exceeds the specified dimensions */
+  width: 100px;
+  height: 50px; 
+  overflow: hidden;
 }
 
 .image-container img {
-  width: 100%; /* Make the image take 100% of the parent container's width */
-  height: 100%; /* Make the image take 100% of the parent container's height */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
 }
 
-.BirdInfo {
+.animals-container{
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  width: 40%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.element-container{
+  border: .5px solid grey;
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.element-container button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: large;
+  color: grey;
+  font-weight: bold;
+}
+
+.bird-info {
   border: 1px solid #ddd;
   padding: 15px;
   margin: 10px;
@@ -31,7 +67,8 @@
 }
 
 .bird-info-header img {
-  max-width: 100px;
+  width: 180px;
+  height: 240px;
   border-radius: 4px;
 }
 
@@ -47,41 +84,4 @@
   color: #555;
 }
 
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
